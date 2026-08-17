@@ -1,0 +1,29 @@
+Rule 1
+
+A student cannot apply to their own project.
+
+Rule 2
+
+A student cannot apply twice to the same project.
+
+Rule 3
+
+A student cannot apply if the project is no longer recruiting.
+
+Rule 4
+
+A student cannot be accepted if the team is already full.
+
+Rule 5
+
+Once accepted, the student becomes a team member.
+
+Rule 6
+
+A student cannot have duplicate membership in the same team.
+
+Rule 7
+
+The project owner cannot accept more people than the maximum team size.
+
+These are the kinds of rules that make the project more than basic CRUD.

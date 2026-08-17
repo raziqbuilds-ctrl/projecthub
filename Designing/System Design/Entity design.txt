@@ -1,0 +1,22 @@
+Now identify the things that actually exist in our system.
+
+
+User
+
+Profile
+
+Skill
+
+Project
+
+Application
+
+Team
+
+TeamMember
+
+Task
+
+Milestone
+
+Notification

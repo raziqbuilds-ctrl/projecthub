@@ -1,0 +1,20 @@
+                    ┌───────────────┐
+                    │    Student    │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ React Website │
+                    └───────┬───────┘
+                            │ HTTP/REST
+                            ▼
+                    ┌───────────────┐
+                    │ Spring Boot   │
+                    │    Backend    │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │  PostgreSQL   │
+                    └───────────────┘
+First decide how the entire application will be structured.
