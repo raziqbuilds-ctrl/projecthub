@@ -27,3 +27,4 @@ Rule 7
 The project owner cannot accept more people than the maximum team size.
 
 These are the kinds of rules that make the project more than basic CRUD.
+

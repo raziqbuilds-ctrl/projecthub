@@ -105,7 +105,7 @@ CREATE TABLE milestones (
     due_date DATE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_milestone_project FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE,
-    CONSTRAINT chk_milestone_status CHECK (status IN ('NOT_STARTED','IN_PROGRESS','COMPLETED'))
+    CONSTRAINT chk_milestone_status CHECK (status IN ('PENDING','IN_PROGRESS','COMPLETED'))
 );
 
 CREATE TABLE tasks (
@@ -116,13 +116,15 @@ CREATE TABLE tasks (
     title VARCHAR(200) NOT NULL,
     description TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'TODO',
+    priority VARCHAR(20) NOT NULL DEFAULT 'MEDIUM',
     due_date DATE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_task_project FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE,
     CONSTRAINT fk_task_milestone FOREIGN KEY (milestone_id) REFERENCES milestones(id) ON DELETE SET NULL,
     CONSTRAINT fk_task_assignee FOREIGN KEY (assigned_to) REFERENCES users(id) ON DELETE SET NULL,
-    CONSTRAINT chk_task_status CHECK (status IN ('TODO','IN_PROGRESS','COMPLETED'))
+    CONSTRAINT chk_task_status CHECK (status IN ('TODO','IN_PROGRESS','COMPLETED','BLOCKED')),
+    CONSTRAINT chk_task_priority CHECK (priority IN ('LOW','MEDIUM','HIGH','URGENT'))
 );
 
 CREATE TABLE notifications (
